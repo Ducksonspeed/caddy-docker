@@ -4,7 +4,7 @@
 FROM abiosoft/caddy:builder as builder
 
 ARG version="1.0.3"
-ARG plugins="github.com/nicolasazrak/caddy-cache,github.com/tarent/loginsrv/caddy,github.com/BTBurke/caddy-jwt,github.com/jung-kurt/caddy-cgi,github.com/captncraig/caddy-realip"
+ARG plugins="$plugins"
 ARG enable_telemetry="true"
 
 # process wrapper
