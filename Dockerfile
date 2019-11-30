@@ -4,7 +4,7 @@
 FROM  golang:1.12-alpine as build
 
 ARG version="1.0.3"
-ARG plugins="$plugins"
+ARG plugins=""
 ARG enable_telemetry="true"
 
 # process wrapper
