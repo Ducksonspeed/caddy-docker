@@ -1,7 +1,7 @@
 #
 # Builder
 #
-FROM https://raw.githubusercontent.com/Ducksonspeed/caddy-docker/master/builder/builder.sh as builder
+FROM  golang:1.12-alpine as build
 
 ARG version="1.0.3"
 ARG plugins="$plugins"
