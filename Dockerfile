@@ -4,12 +4,12 @@
 FROM abiosoft/caddy:builder as builder
 
 ARG version="1.0.3"
-ARG plugins="git,cors,realip,expires,cache,cloudflare"
+ARG plugins="github.com/nicolasazrak/caddy-cache,github.com/tarent/loginsrv/caddy,github.com/BTBurke/caddy-jwt,github.com/jung-kurt/caddy-cgi,github.com/captncraig/caddy-realip"
 ARG enable_telemetry="true"
 
 # process wrapper
 RUN go get -v github.com/abiosoft/parent
-
+ADD https://raw.githubusercontent.com/jeffreystoke/caddy-docker/master/builder/builder.sh /usr/bin/builder.sh
 RUN VERSION=${version} PLUGINS=${plugins} ENABLE_TELEMETRY=${enable_telemetry} /bin/sh /usr/bin/builder.sh
 
 #
