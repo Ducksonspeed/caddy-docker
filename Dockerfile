@@ -1,7 +1,7 @@
 #
 # Builder
 #
-FROM  golang:1.12-alpine as build
+FROM abiosoft/caddy:builder
 
 ARG version="1.0.3"
 ARG plugins=""
