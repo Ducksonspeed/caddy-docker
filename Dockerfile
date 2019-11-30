@@ -1,7 +1,7 @@
 #
 # Builder
 #
-FROM abiosoft/caddy:builder as builder
+FROM https://raw.githubusercontent.com/Ducksonspeed/caddy-docker/master/builder/builder.sh as builder
 
 ARG version="1.0.3"
 ARG plugins="$plugins"
